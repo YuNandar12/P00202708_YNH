@@ -1,0 +1,23 @@
+{% extends 'adminbase.html' %}
+
+{% block body %} 
+{% load static %}
+<br> 
+<section class="create">
+    <h1>{{ info.name if service else 'Add New Information' }}</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+
+   
+</section>
+
+
+{% endblock %}
+
+
+    
+
+

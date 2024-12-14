@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block body %}
+<div class="form-container">
+    <marquee>
+        <img src="{% static 'img/doctorbgm.gif' %}" width="40" alt="">
+        <label style="color:#00B98E; font-size: larger;">
+            "Make Your Family Happy 😄, Compassionate care"
+        </label>
+        <img src="{% static 'img/doctorbgm.gif' %}" width="40" alt="">
+    </marquee>
+
+    <div class="registration-form scale-in-center">
+        <h1 align="center">Appointment Form</h1>
+
+        <!-- Display messages -->
+        <!-- {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li style="color: {% if message.tags == 'error' %}red{% else %}green{% endif %};">
+                        {{ message }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %} -->
+
+        <form method="post" action="{% url 'book_appointment' %}">
+            {% csrf_token %}
+            <table border="0" align="center">
+                <tr>
+                    <td><span>Full Name</span></td>
+                    <td>{{ form.full_name }}</td>
+                </tr>
+                <tr>
+                    <td><span>Email</span></td>
+                    <td>{{ form.email }}</td>
+                </tr>
+                <tr>
+                    <td><span>Phone Number</span></td>
+                    <td>{{ form.phone_number }}</td>
+                </tr>
+                <tr>
+                    <td><span>Preferred Date</span></td>
+                    <td>{{ form.preferred_date }}</td>
+                </tr>
+                <tr>
+                    <td><span>Preferred Time</span></td>
+                    <td>{{ form.preferred_time }}</td>
+                </tr>
+                <tr>
+                    <td><span>Preferred Doctor</span></td>
+                    <td>{{ form.preferred_doctor }}</td>
+                </tr>
+                <tr>
+                    <td><span>Gender</span></td>
+                    <td>{{ form.gender }}</td>
+                </tr>
+            </table>
+
+            <!-- Form Errors -->
+            {% if form.errors %}
+                <div class="alert alert-danger">
+                    {{ form.errors }}
+                </div>
+            {% endif %}
+
+            <div style="text-align: center; margin-top: 20px;">
+                <input type="submit" value="Book Appointment" style="padding: 10px 20px; background-color: #00B98E; color: white; border: none; cursor: pointer;"/>
+            </div>
+        </form>
+
+        <div style="text-align: center; margin-top: 10px;">
+            <a href="/myapp/home/" style="color: black; font-size: 12px; text-decoration: underline;">
+                Return to Home
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

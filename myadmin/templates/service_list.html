@@ -1,0 +1,39 @@
+{% extends 'adminbase.html' %}
+
+{% block body %} 
+{% load static %}
+
+    <h1>Services</h1><br><br>
+    &nbsp;&nbsp;&nbsp;<a href="{% url 'service_create' %} " class="btn btn-success">Add Service</a><br><br>
+    <table class="table table-bordered border-success ">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for se in services %}
+            <tr>
+                <td>{{ se.name }}</td>
+                <td>{{ se.description }}</td>
+                <td>
+                    {% if se.id %}
+                        <a href="{% url 'service_update' se.id %}"><i class="fa-solid fa-pen-to-square" style="color: blue;"></i></a>
+                        <a href="{% url 'service_delete' se.id %}"><i class="fa-solid fa-trash" style="color: #f50a0a;"></i></a>
+                        
+                    {% else %}
+                        <span class="text-danger">Invalid ID</span>
+                    {% endif %}
+                </td>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+        
+    </table>
+    
+    
+
+{% endblock %}

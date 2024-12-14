@@ -1,0 +1,106 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #00b98e41;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Section Styling */
+.sign-up {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.sign-up h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #28a745;
+}
+
+/* Form Styling */
+.sign-up form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sign-up form p {
+    text-align: left;
+    font-size: 14px;
+}
+
+.sign-up input[type="text"],
+.sign-up input[type="password"],
+.sign-up input[type="email"],
+.sign-up select,
+.sign-up textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.sign-up input:focus,
+.sign-up select:focus,
+.sign-up textarea:focus {
+    outline: none;
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.2);
+}
+
+/* Button Styling */
+.sign-up button {
+    background-color: #28a745;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sign-up button:hover {
+    background-color: #218838;
+}
+
+/* Link Styling */
+.sign-up p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.sign-up a {
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sign-up a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .sign-up {
+        padding: 20px;
+    }
+
+    .sign-up h1 {
+        font-size: 20px;
+    }
+
+    .sign-up button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

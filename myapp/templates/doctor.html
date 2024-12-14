@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<center><br>
+    <div class="row">
+        <marquee>
+            <img src="{% static 'img/doctorbgm.gif' %}" width="40" alt="">
+            <label style="color:#00B98E; font-size: larger;">"Make Your Family Happy😄, Compassionate care"</label>
+            <img src="{% static 'img/doctorbgm.gif' %}" width="40" alt="">
+          </marquee>
+        {% for doctor in doctors %}
+        <div class="col-4 scale-in-center">
+            {% if doctor.profile_picture %}
+            <img src="{{ doctor.profile_picture.url }}" alt="{{ doctor.name }}">
+            {% else %}
+            <img src="{% static 'img/default-doctor.png' %}" alt="Default Profile Picture"><br>
+            {% endif %}
+            <h5>{{ doctor.name }}</h5>
+            <p>{{ doctor.specialization }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</center>
+{% endblock %}

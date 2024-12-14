@@ -1,0 +1,215 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block body %}
+
+
+      <!-- Header Start -->
+      <div class="container-fluid header bg-white p-0">
+        <div class="row g-0 align-items-center flex-column-reverse flex-md-row mt-lg-5">
+          <div class="col-md-6 p-5 mt-lg-5"> <br><br><br><br> <br><br>
+            <h1 class="display-5 animated fadeIn mb-4 slide-top">Trusted, <span class="text" style="color: green;">compassionate care</span>
+            </h1>
+
+            <a href="/myapp/appointment/" class="btn btn-primary py-3 px-5 me-3 animated fadeIn  slide-top" style="background-color: green;">Appoinment</a>
+          </div>
+          <div class="col-md-6 animated fadeIn">
+            <div class="owl-carousel header-carousel">
+              <div class="owl-carousel-item">
+              
+                <img class="img-fluid  scale-in-center" src="{% static 'img/G1.gif' %}" alt="">
+                
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header End -->
+
+      
+     
+        
+   <!-- Start Fun-facts -->
+		<div id="fun-facts" class="fun-facts section overlay">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-12">
+            <div class="card single-fun">
+              <div class="card-body">
+                <div class="stat-widget-five">
+                  <div class="stat-icon dib flat-color-4">
+                    <i class="pe-7s-users"></i>
+                  </div>
+                  <div class="stat-content">
+                    <div class="text-left dib" style="color: white;">
+                      <div class="stat-text"><span class="count">100</span></div>
+                      <div class="stat-heading">Hospital Rooms</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+					<div class="col-lg-3 col-md-6 col-12">
+            <div class="card single-fun">
+              <div class="card-body">
+                <div class="stat-widget-five">
+                  <div class="stat-icon dib flat-color-4">
+                    <i class="pe-7s-users"></i>
+                  </div>
+                  <div class="stat-content">
+                    <div class="text-left dib" style="color: white;">
+                      <div class="stat-text"><span class="count">10</span></div>
+                      <div class="stat-heading">Specialist Doctors</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+					<div class="col-lg-3 col-md-6 col-12">
+            <div class="card single-fun">
+              <div class="card-body">
+                <div class="stat-widget-five">
+                  <div class="stat-icon dib flat-color-4">
+                    <i class="pe-7s-users"></i>
+                  </div>
+                  <div class="stat-content">
+                    <div class="text-left dib" style="color: white;">
+                      <div class="stat-text"><span class="count">3468</span></div>
+                      <div class="stat-heading">Happy Patients</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+					<div class="col-lg-3 col-md-6 col-12">
+            <div class="card single-fun">
+              <div class="card-body">
+                <div class="stat-widget-five">
+                  <div class="stat-icon dib flat-color-4">
+                    <i class="pe-7s-users"></i>
+                  </div>
+                  <div class="stat-content">
+                    <div class="text-left dib" style="color: white;">
+                      <div class="stat-text"><span class="count">32</span></div>
+                      <div class="stat-heading">Years of Experience</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+				</div>
+			</div>
+		</div>
+		<!--/ End Fun-facts -->
+
+    
+    <!-- About Us Section -->
+    <section id="about-us" class="about-us">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>Happy Medical Clinic is committed to providing high-quality healthcare services to our community. With a team
+          of experienced doctors and modern facilities, we offer a wide range of medical services to meet your needs.
+          Our mission is to ensure that you receive the best possible care in a comfortable and welcoming environment.
+        </p>
+      </div><hr>
+    </section>
+
+
+ <!-- Hero Section -->
+ <section class="hero">
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <h1>Welcome to Happy Medical Clinic</h1>
+      <p>Your health, our priority. Comprehensive care for your entire family.</p>
+      <a href="#services" class="btn">Explore Our Services</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      
+        <h2>Our Services</h2>
+        <div class="service-container">
+          <div class="service-card">
+            <div class="icon">
+              <i class="fas fa-stethoscope"></i>
+            </div>
+            <h3>General Check-ups</h3>
+            <p>Regular health exams and tests to keep you in optimal health.</p>
+          </div>
+          <div class="service-card">
+            <div class="icon">
+              <i class="fas fa-child"></i>
+            </div>
+            <h3>Pediatric Care</h3>
+            <p>Comprehensive healthcare for children from newborns to teenagers.</p>
+          </div>
+          <div class="service-card">
+            <div class="icon">
+              <i class="fas fa-female"></i>
+            </div>
+            <h3>Women's Health</h3>
+            <p>Specialized care for women’s health needs including gynecological exams and prenatal care.</p>
+          </div>
+          <div class="service-card">
+            <div class="icon">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+            <h3>Chronic Disease Management</h3>
+            <p>Expert management of chronic conditions such as diabetes, hypertension, and asthma.</p>
+          </div>
+          <div class="service-card">
+            <div class="icon">
+              <i class="fas fa-vials"></i>
+            </div>
+            <h3>Laboratory Services</h3>
+            <p>State-of-the-art diagnostic testing including blood tests and urinalysis.</p>
+          </div>
+          <div class="service-card">
+            <div class="icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3>Mental Health Services</h3>
+            <p>Counseling, therapy, and medication management for mental health conditions.</p>
+          </div>
+        </div>
+      
+    </section>
+
+   
+
+    <!-- Contact Us Section -->
+    <section id="contact-us" class="contact-us">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>We are here to help you with all your healthcare needs. Reach out to us for appointments, questions, or any
+          concerns you may have.</p>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> Email: contact@happymedclinic.com</p>
+          <p><i class="fas fa-phone"></i> Phone: (555) 123-4567</p>
+          <p><i class="fas fa-map-marker-alt"></i> Address: 123 Health St, Wellness City, Country</p>
+        </div>
+        <a href="#" class="btn">Get in Touch</a>
+      </div>
+    </section>
+
+
+
+    
+
+
+</div>
+
+{% endblock %}
+

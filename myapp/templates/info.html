@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+  <main>
+    <section class="about-uss">
+      <marquee>
+        <img src="{% static 'img/doctorbgm.gif' %}" width="40" alt="">
+        <label style="color:#00B98E; font-size: larger;">"Make Your Family Happy😄, Compassionate care"</label>
+        <img src="{% static 'img/doctorbgm.gif' %}" width="40" alt="">
+      </marquee>
+      <div class="space"></div>
+      
+      
+        {% for in in infos %}
+        <div class="se mt-lg-5">
+          <h2 class="y scale-in-center">{{ in.name }}</h2>
+          <p>{{ in.Avoid }}</p>
+          <p>{{ in.Risk_Factors }}</p>
+          <p>{{ in.What_to_Do }}</p>
+        </div>
+        {% empty %}
+        <p>No services available at the moment.</p>
+        {% endfor %}
+     
+    </section>
+  </main>
+
+{% endblock %}

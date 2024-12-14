@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block body %}
+
+<br>
+<center>
+    <h3>Reviews</h3>
+</center><br>
+{% for review in reviews %}
+<div class="review-page">
+    <div class="review-page-header">
+        
+        <p><strong>Email:</strong>{{ review.email }}</p>
+        <p><strong>Date:</strong> {{ review.created_at|date:"d/m/Y" }} <strong>Rating:</strong> {{ review.star_rating }}
+    </p>
+        
+
+
+    </div>
+    <div class="review-page-body">
+        <p>{{ review.review_text }}</p>
+    </div>
+</div>
+{% endfor %}
+
+
+<div class="clear"></div>
+
+<div class="space"></div>
+
+<hr><br>
+
+<div class="block1">
+    <div style="float:left;width:55%;padding:80px 0px;text-align: center;">
+        <img src="{% static 'img/review3.png' %}" alt="" style="width:95%; height: 250px;">
+    </div>
+
+    <div style="float:left;width:30%;text-align: center;" class="block1">
+        <h1>Your Review</h1>
+        <form method="POST" action="{% url 'review_create' %} ">
+            {% csrf_token %}
+            <table border="0" align="center">
+                <tr>
+                    <td><label for="email">email</label></td>
+                    <td>
+                        <input type="email" id="email" name="email" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="review_text">review_text</label></td>
+                    <td>
+                        <input type="review_text" id="review_text" name="review_text" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="rating">Rating</label></td>
+                    <td>
+                        <div class=" d-flex justify-content-center">
+                            <div class=" text-center">
+
+                                <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label
+                                        for="5">☆</label>
+                                        <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> 
+                                        <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> 
+                                        <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> 
+                                        <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </td>
+                </tr>
+                
+    </div>
+    
+    <td colspan="2" style="text-align: center;">
+        <input type="submit" value="submit" />
+    </td>
+    </tr>
+    </table>
+    </form>
+
+</div>
+</div>
+
+<!-- <center>
+    <h5>If you want to give review, please login first.
+        <a href="{% url 'login_view' %}" class="btn btn-success" role="button">Login</a>
+    </h5>
+</center> -->
+
+
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'adminbase.html' %}
+{% load static %}
+
+{% block body %}
+<h1>Doctors</h1><br><br>
+&nbsp;&nbsp;&nbsp;<a href="{% url 'create_doctor' %}" class="btn btn-success">Add New Doctor</a><br><br>
+<table class="table table-success table-striped ">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Specialization</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>preferred_time_start</th>
+            <th>preferred_time_end</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+       
+        {% for dr in doctors %}
+        <tr>
+            <td>
+                <img src="{{ dr.profile_picture.url }}" alt="{{ dr.name }}" style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;">
+            </td>
+            <td>{{ dr.name }}</td>
+            <td>{{ dr.specialization }}</td>
+            <td>{{ dr.email }}</td>
+            <td>{{ dr.preferred_time_start }}</td>
+            <td>{{ dr.preferred_time_end }}</td>
+            <td>{{ dr.phone }}</td>
+            <td>
+                <a href="{% url 'update_doctor' dr.id %}" class="btn btn-warning">Edit</a>
+                <a href="{% url 'delete_doctor' dr.id %}" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}

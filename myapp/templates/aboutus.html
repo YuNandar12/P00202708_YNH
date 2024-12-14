@@ -1,0 +1,60 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block body %}
+
+
+
+  <main>
+    <section class="about-uss">
+      <h2 class="y scale-in-center">About Us</h2>
+      <p>Welcome to Happy Medical Clinic! We are thrilled to have you as a part of our healthcare family. Our clinic
+        is
+        dedicated to providing exceptional medical care with a focus on compassion, respect, and personalized
+        attention.
+        From preventive care to specialized treatments, our experienced team is here to support your health and
+        well-being. We strive to create a warm and welcoming environment where you feel comfortable and valued.</p>
+      <div class="team mt-lg-5">
+
+        <div class="team-member scale-in-center">
+          <img src="{% static 'img/aboutp2.jpg' %}" alt="Dr. Jane Smith">
+          
+          <h4>Dr. Jane Smith</h4>
+          <p>Dr. Jane Smith is a board-certified physician with over 20 years of experience in family medicine.</p>
+        </div>
+        <h3 class="y mt-lg-5 scale-in-center">Meet Our Team</h3>
+        <div class="team-member scale-in-center">
+          <img src="{% static 'img/aboutp1.jpg' %}" alt="Dr. John Doe">
+          <h4>Dr. Helen Doe</h4>
+          <p>Dr. Helen Doe specializes in internal medicine and is known for his compassionate care and expertise.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mission">
+      <h2 class="y scale-in-center">Our Mission</h2>
+      <p>
+        At Happy Medical Clinic, our mission is to provide outstanding healthcare services with a focus on compassion,
+        integrity, and excellence. We are dedicated to improving the health and well-being of our community by
+        offering
+        comprehensive and personalized medical care. Our team of experienced professionals is committed to preventive
+        health, early diagnosis, and effective treatment, ensuring each patient receives the highest quality of care.
+        We
+        strive to create a welcoming environment where patients feel respected, valued, and empowered to take charge
+        of
+        their health. Our goal is to promote lifelong wellness and enhance the quality of life for all our patients.
+      </p>
+    </section>
+    <section class="trust">
+      <h2 class="y scale-in-center">Why You Should Trust Us?</h2>
+      <p>At Happy Medical Clinic, your trust is our highest priority. Our clinic is staffed with highly qualified and
+        experienced professionals who are dedicated to providing the best care possible. We adhere to the highest
+        standards of medical ethics and patient confidentiality. Our state-of-the-art facilities are equipped with the
+        latest medical technology to ensure accurate diagnoses and effective treatments. We take the time to listen to
+        your concerns, answer your questions, and involve you in your care decisions. Your health and satisfaction are
+        at the core of everything we do, ensuring you receive reliable and compassionate care.</p>
+    </section>
+  </main>
+{% endblock %}

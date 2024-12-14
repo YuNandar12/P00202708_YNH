@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<center>
+  <main>
+    <section class="services1 scale-in-center" style="width: 80%;">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'img/services1.gif' %}" class="d-block w-100" alt="Service 1">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'img/services5.gif' %}" class="d-block w-100" alt="Service 2">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'img/services4.gif' %}" class="d-block w-100" alt="Service 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <h2 class="mt-lg-5">Our Services</h2>
+      
+      <div class="row justify-content-center mt-lg-5">
+        <div class="col-md-6">
+            <form class="d-flex" method="get" action="{% url 'search' %}">
+                <div class="input-group">
+                    <input class="form-control form-control-lg" type="search" placeholder="Search" aria-label="Search " name="q" value="{{ request.GET.q }}">
+                    <button class="btn btn-primary px-4" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+      <div class="service1-container ">
+        {% for service in services %}
+        <div class="service1-card mt-lg-5">
+          <h3>{{ service.name }}</h3>
+          <p>{{ service.description }}</p>
+        </div>
+        {% empty %}
+        <p>No services found matching your query.</p>
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+</center>
+{% endblock %}
+
+

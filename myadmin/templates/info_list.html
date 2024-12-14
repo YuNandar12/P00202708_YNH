@@ -1,0 +1,42 @@
+{% extends 'adminbase.html' %}
+
+{% block body %} 
+{% load static %}
+
+    <h1>Health's Information</h1><br><br>
+    &nbsp;&nbsp;&nbsp;<a href="{% url 'info_create' %} " class="btn btn-success">Add Info</a><br><br>
+    <table class="table table-bordered border-success ">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Avoid</th>
+                <th>Risk Factors</th>
+                <th>What to Do</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for in in infos %}
+            <tr>
+                <td>{{ in.name }}</td>
+                <td>{{ in.Avoid }}</td>
+                <td>{{ in.Risk_Factors }}</td>
+                <td>{{ in.What_to_Do }}</td>
+                <td>
+                    {% if in.id %}
+                        <a href="{% url 'info_update' in.id %}"><i class="fa-solid fa-pen-to-square" style="color: blue;"></i></a>
+                        <a href="{% url 'info_delete' in.id %}"><i class="fa-solid fa-trash" style="color: #f50a0a;"></i></a>
+                    {% else %}
+                        <span class="text-danger">Invalid ID</span>
+                    {% endif %}
+                </td>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+        
+    </table>
+    
+    
+
+{% endblock %}

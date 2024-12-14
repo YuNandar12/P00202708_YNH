@@ -1,0 +1,96 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9f7ec; /* Soft green background */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Styling for the create section */
+.create {
+    max-width: 600px;
+    margin: 50px auto; /* Center the section */
+    background-color: #ffffff; /* White background for contrast */
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #b2dfdb; /* Light green border */
+    box-shadow: 0 4px 10px rgba(0, 128, 0, 0.1); /* Subtle green shadow */
+}
+
+/* Heading inside the create section */
+.create h1 {
+    font-size: 2rem;
+    color: #2e7d32; /* Dark green heading */
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Form styling */
+.create form {
+    width: 100%;
+}
+
+/* Input fields and textarea styling */
+.create form input[type="text"],
+.create form textarea,
+.create form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #81c784; /* Light green border */
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #2e7d32; /* Dark green text */
+    background-color: #f1f8e9; /* Very light green background */
+    box-sizing: border-box;
+}
+
+.create form input[type="text"]:focus,
+.create form textarea:focus,
+.create form select:focus {
+    border-color: #388e3c; /* Darker green focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(56, 142, 60, 0.5); /* Green focus shadow */
+}
+
+/* Textarea styling */
+.create form textarea {
+    resize: vertical; /* Allow only vertical resizing */
+    min-height: 120px;
+}
+
+/* Button styling */
+.create form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff; /* White text */
+    background-color: #43a047; /* Green button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.create form button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+    transform: scale(1.03); /* Slight zoom effect */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .create {
+        padding: 20px;
+    }
+
+    .create h1 {
+        font-size: 1.5rem;
+    }
+
+    .create form button {
+        padding: 10px;
+    }
+}
